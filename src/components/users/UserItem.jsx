@@ -16,9 +16,9 @@ function UserItem({ user: { login, avatar_url } }) {
           <h2 className="card-title">{login}</h2>
           <Link
             className="text-base-content text-opacity-40"
-            to={`/users/${login}`}
+            to={`/user/${login}`}
           >
-            visit Profile
+            Visit Profile
           </Link>
         </div>
       </div>
@@ -26,7 +26,7 @@ function UserItem({ user: { login, avatar_url } }) {
   );
 }
 
-UserItem.prototype = {
+UserItem.propTypes = {
   user: PropTypes.object.isRequired,
 };
 
